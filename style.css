@@ -1,0 +1,537 @@
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background: #f8f8f8;
+}
+.hero {
+  background: linear-gradient(to bottom, #001f3f, #0074D9);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+.main-title {
+  font-size: 2.5rem;
+}
+.search-box {
+  margin-top: 20px;
+}
+.search-box input {
+  padding: 10px;
+  width: 250px;
+}
+.search-box button {
+  padding: 10px 15px;
+  background-color: #FFDC00;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.departments {
+  padding: 30px;
+  text-align: center;
+}
+.department-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.department-card {
+  background: #001f3f;
+  color: white;
+  text-decoration: none;
+  width: 200px;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+.department-card:hover {
+  background-color: #FFDC00;
+  color: #001f3f;
+}
+
+.home-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.home-icon:hover {
+  color: #FFDC00;
+}
+
+/* تحسين تفاعلية الأيقونات */
+.department-card i, .featured-books i, .book i, .home-icon i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.department-card:hover i,
+.home-icon:hover i {
+  transform: scale(1.3);
+}
+
+/* تحسين عرض الكتب */
+.featured-books {
+  flex-wrap: wrap;
+}
+.book {
+  flex: 1 1 200px;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* تنسيق جدول الكتب */
+.books-table {
+  margin: 30px auto;
+  max-width: 800px;
+  border-collapse: collapse;
+  width: 90%;
+}
+.books-table th, .books-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+.books-table th {
+  background-color: #001f3f;
+  color: white;
+}
+.books-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+.dark-mode .department-card,
+.dark-mode .book,
+.dark-mode .books-table {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+.dark-mode .books-table th {
+  background-color: #333;
+}
+
+/* Animated Buttons */
+button, .department-card, .home-icon {
+  transition: all 0.3s ease;
+}
+button:hover, .department-card:hover, .home-icon:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  padding: 12px 15px;
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+  z-index: 999;
+}
+.scroll-top-btn:hover {
+  background-color: #FFDC00;
+  color: black;
+}
+body {
+  scroll-behavior: smooth;
+}
+.welcome-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.dark-btn {
+  margin-top: 15px;
+  background: #ffdc00;
+  color: #001f3f;
+  padding: 8px 15px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Rating and favorite buttons */
+.fav-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+}
+.favorited span {
+  color: red;
+}
+.rating-stars i {
+  color: #ccc;
+  cursor: pointer;
+}
+.rating-stars i.rated {
+  color: gold;
+}
+.books-table td .book-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.book-img {
+  width: 60px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.download-btn {
+  display: inline-block;
+  background-color: #0074D9;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.download-btn:hover {
+  background-color: #FFDC00;
+  color: black;
+}
+
+
+/* تحسين الوضع الليلي */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+.dark-mode .hero {
+  background: linear-gradient(to bottom, #1a1a1a, #333);
+}
+.dark-mode .main-title,
+.dark-mode .welcome-text,
+.dark-mode .home-icon,
+.dark-mode .dark-btn {
+  color: #FFDC00;
+}
+.dark-mode .department-card,
+.dark-mode .book,
+.dark-mode .books-table,
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #222;
+  color: #fff;
+}
+.dark-mode .department-card:hover {
+  background-color: #FFDC00;
+  color: #001f3f;
+}
+.dark-mode .books-table th {
+  background-color: #444;
+}
+.dark-mode .download-btn {
+  background-color: #FFDC00;
+  color: #001f3f;
+}
+.dark-mode .download-btn:hover {
+  background-color: #0074D9;
+  color: white;
+}
+.dark-mode .scroll-top-btn {
+  background-color: #444;
+  color: #FFDC00;
+}
+
+
+/* تحسين عرض صفوف الجدول في الوضع الليلي */
+.dark-mode .books-table tr:nth-child(even) {
+  background-color: #1e1e1e;
+}
+.dark-mode .books-table tr:nth-child(odd) {
+  background-color: #2a2a2a;
+}
+
+
+/* زر الوضع الليلي في جميع الأوضاع */
+.dark-btn {
+  background-color: #FFDC00;
+  color: #001f3f;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s, color 0.3s;
+}
+.dark-btn:hover {
+  background-color: #ffe800;
+  color: #000;
+}
+.dark-mode .dark-btn {
+  background-color: #FFDC00;
+  color: #001f3f;
+}
+
+
+.testimonials, .contact-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.testimonials h2, .contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.testimonial {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.testimonial i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #001f3f;
+}
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.contact-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+.submit-btn {
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #FFDC00;
+  color: #001f3f;
+}
+
+/* الوضع الليلي للأقسام الجديدة */
+.dark-mode .testimonial {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background-color: #222;
+  color: #fff;
+  border-color: #333;
+}
+.dark-mode .submit-btn {
+  background-color: #FFDC00;
+  color: #001f3f;
+}
+.dark-mode .submit-btn:hover {
+  background-color: #0074D9;
+  color: white;
+}
+
+
+/* تحريك العناصر عند الظهور */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.departments p,
+.books-table,
+.rating-stars,
+.fav-btn,
+.download-btn,
+.book-img {
+  animation: fadeInUp 0.8s ease both;
+}
+
+/* تحسين شكل الجدول */
+.books-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+.books-table th {
+  background-color: #001f3f;
+  color: white;
+  padding: 14px;
+}
+.books-table td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+/* تعديل لون أزرار التنزيل */
+.download-btn {
+  background-color: #0074D9;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background 0.3s, transform 0.3s;
+}
+.download-btn:hover {
+  background-color: #FFDC00;
+  color: #001f3f;
+  transform: scale(1.05);
+}
+
+/* صور الكتب */
+.book-img {
+  width: 60px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* الوضع الليلي للصور والأزرار */
+.dark-mode .book-img {
+  border: 1px solid #444;
+}
+.dark-mode .books-table {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+
+.site-footer {
+  background-color: #002b5c;
+  color: #fff;
+  padding: 40px 20px 10px;
+  font-size: 0.95rem;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+.footer-column {
+  flex: 1 1 220px;
+}
+.footer-column h3 {
+  margin-bottom: 10px;
+  color: #FFDC00;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+.footer-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+
+/* صندوق بحث حديث */
+.modern-search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 0;
+}
+.modern-search-box input {
+  padding: 12px 20px;
+  width: 60%;
+  border: 2px solid #0074D9;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+}
+.modern-search-box button {
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s ease;
+}
+.modern-search-box button:hover {
+  background-color: #005fa3;
+}
+.dark-mode .modern-search-box input {
+  background-color: #222;
+  color: white;
+  border-color: #FFDC00;
+}
+.dark-mode .modern-search-box button {
+  background-color: #FFDC00;
+  color: #001f3f;
+}
+.dark-mode .modern-search-box button:hover {
+  background-color: #ffc107;
+}

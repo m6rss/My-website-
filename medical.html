@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>قسم الطب</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="hero">
+    <h1 class="main-title">📚 قسم الطب</h1>
+    <a href="../index.html" class="home-icon" title="العودة للرئيسية"><i class="fas fa-home"></i></a>
+    <button onclick="toggleDarkMode()" class="dark-btn" style="position:absolute; right:20px; top:20px;">🌓 الوضع الليلي</button>
+  </header>
+
+  <main class="departments">
+    <p style="text-align:center;">📖 استعرض الكتب، شاهد الصور، قيّم أو أضف للمفضلة، أو قم بتحميل الكتاب.</p>
+
+    <div style="text-align:center; margin: 20px;">
+      <input type="text" id="filterInput" placeholder="🔍 فلترة حسب اسم الكتاب أو المؤلف" onkeyup="filterBooks()" style="padding:10px; width:70%;">
+    </div>
+
+    <table class="books-table">
+      <thead>
+        <tr>
+          <th>صورة</th>
+          <th>اسم الكتاب</th>
+          <th>المؤلف</th>
+          <th>تفاعل</th>
+          <th>تحميل</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="../img/book1_medical.jpg" alt="صورة الكتاب" class="book-img"></td>
+          <td>مقدمة في الطب</td>
+          <td>أ. محمد أحمد</td>
+          <td class="book-actions">
+            <div class="rating-stars">
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 1)"></i>
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 2)"></i>
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 3)"></i>
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 4)"></i>
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 5)"></i>
+            </div>
+            <button class="fav-btn" onclick="toggleFavorite(this)">
+              <span>🤍</span>
+            </button>
+          </td>
+          <td><a href="#" class="download-btn">📥 تنزيل</a></td>
+        </tr>
+        <tr>
+          <td><img src="../img/book2_medical.jpg" alt="صورة الكتاب" class="book-img"></td>
+          <td>أساسيات الطب المتقدمة</td>
+          <td>د. علي عبد الله</td>
+          <td class="book-actions">
+            <div class="rating-stars">
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 1)"></i>
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 2)"></i>
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 3)"></i>
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 4)"></i>
+              <i class="fas fa-star" onclick="rateBook(this.parentElement, 5)"></i>
+            </div>
+            <button class="fav-btn" onclick="toggleFavorite(this)">
+              <span>🤍</span>
+            </button>
+          </td>
+          <td><a href="#" class="download-btn">📥 تنزيل</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

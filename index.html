@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مكتبة الجند الجامعية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مكتبة الجند الجامعية – كتب في جميع المجالات.">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1 class="main-title">📚 مكتبة الجند الجامعية</h1>
+    <p class="welcome-text">مرحبًا بك في مكتبتنا الرقمية، تصفح الأقسام أو ابحث عن محتواك المفضل</p>
+    <button onclick="toggleDarkMode()" class="dark-btn">🌓 الوضع الليلي</button>
+  </header>
+
+  <main>
+    <section class="departments">
+      <h2>الأقسام الرئيسية</h2>
+
+      
+<div class="modern-search-box">
+  <input type="text" id="sectionFilter" placeholder="ابحث عن قسم..." onkeyup="filterSections()" />
+  <button><i class="fas fa-search"></i> بحث</button>
+</div>
+
+
+      <div class="department-grid" id="departmentGrid">
+        <a href="sections/programming.html" class="department-card">
+          <i class="fas fa-code"></i>
+          <h3>البرمجة</h3>
+        </a>
+        <a href="sections/medical.html" class="department-card">
+          <i class="fas fa-stethoscope"></i>
+          <h3>الطب</h3>
+        </a>
+        <a href="sections/science.html" class="department-card">
+          <i class="fas fa-flask"></i>
+          <h3>العلوم</h3>
+        </a>
+        <a href="sections/novels.html" class="department-card">
+          <i class="fas fa-feather-alt"></i>
+          <h3>الروايات</h3>
+        </a>
+      </div>
+    </section>
+  
+<section id="testimonials" class="testimonials">
+  <h2>آراء الزوار <i class="fas fa-comments"></i></h2>
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <i class="fas fa-user-graduate"></i>
+      <p>"موقع رائع سهل الاستخدام وساعدني كثيراً في دراستي!"</p>
+      <span>- خالد من تعز</span>
+    </div>
+    <div class="testimonial">
+      <i class="fas fa-user"></i>
+      <p>"أفضل مكتبة رقمية استخدمتها حتى الآن، محتوى متنوع ومجاني!"</p>
+      <span>- سارة من صنعاء</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <h2>تواصل معنا <i class="fas fa-envelope"></i></h2>
+  <form onsubmit="submitContactForm(event)" class="contact-form">
+    <input type="text" id="name" placeholder="الاسم الكامل" required>
+    <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+    <textarea id="message" placeholder="رسالتك" required></textarea>
+    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> إرسال</button>
+  </form>
+</section>
+
+</main>
+
+  <button onclick="scrollToTop()" class="scroll-top-btn" title="العودة للأعلى">⬆️</button>
+
+  <footer style="text-align:center; padding:20px; background:#001f3f; color:white;">
+    جميع الحقوق محفوظة © 2025 مكتبة الجند
+  </footer>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <img src="img/logo.png" alt="مكتبة الجند" class="footer-logo">
+      <p>مكتبة الجند الجامعية، مكتبة رقمية لخدمة الطلاب والباحثين في كافة التخصصات.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h3>روابط مهمة</h3>
+      <ul>
+        <li><a href="https://just.edu.ye/en/home" target="_blank">صفحة الجامعة</a></li>
+        <li><a href="https://just.edu.ye/en/students/details/services" target="_blank">بوابة الطالب</a></li>
+        <li><a href="#">عن المكتبة</a></li>
+        <li><a href="#contact">راسل الإدارة</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>تواصل معنا</h3>
+      <p><i class="fas fa-phone-alt"></i> 04-265-856</p>
+      <p><i class="fas fa-envelope"></i> info@just.edu.ye</p>
+      <p><i class="fas fa-map-marker-alt"></i> اليمن، تعز، شارع المصلى</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+  </div>
+</footer>
+
+
+</body>
+</html>
